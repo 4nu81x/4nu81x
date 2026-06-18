@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         GitHub Contributions Customizer - 4nu81x
 // @namespace    http://tampermonkey.net/
-// @version      1.4
-// @description  Permanently replace the default GitHub green square contribution graph with red/yellow stars spelling 4nu81x.
+// @version      1.5
+// @description  Permanently replace the default GitHub green square contribution graph with neon-cycling flags and parrots spelling h4k0r.
 // @author       4nu81x
 // @match        *://github.com/*
 // @match        *://*.github.com/*
