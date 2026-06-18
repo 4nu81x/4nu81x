@@ -3,7 +3,9 @@
 Welcome to the digital terminal of **4nu81x**. Offensive security tradecraft developer, CTF architect, and AI rig systems integrator.
 
 <p align="center">
-  <img src="assets/contributions.svg?v=4" alt="4nu81x Grid Telemetry" width="100%" />
+  <img src="assets/contributions_2026.svg?v=4" alt="4nu81x 2026 Grid Telemetry" width="100%" style="margin-bottom: 10px;" />
+  <br/>
+  <img src="assets/contributions_2025.svg?v=4" alt="4nu81x 2025 Grid Telemetry" width="100%" />
 </p>
 
 ---
