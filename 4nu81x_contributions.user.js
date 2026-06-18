@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         GitHub Contributions Customizer - 4nu81x
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Permanently replace the default GitHub green square contribution graph with red/yellow stars spelling 4nu81x.
 // @author       4nu81x
-// @match        https://github.com/4nu81x*
+// @match        *://github.com/*
+// @match        *://*.github.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
-// @run-at       document-end
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
@@ -18,10 +19,10 @@
     // SVG representation of custom star contributions spelling 4nu81x
     const customSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 185" width="100%" height="100%">
 <style>
-  .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 6px; }
-  .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: #8b949e; }
-  .header { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #adbac7; }
-  .star-empty { fill: #21262d; }
+  .bg { fill: transparent; }
+  .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: var(--color-fg-muted, #8b949e); }
+  .header { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: var(--color-fg-default, #adbac7); }
+  .star-empty { fill: var(--color-calendar-graph-day-bg, #21262d); }
   .star-red { fill: #ff453a; }
   .star-yellow { fill: #ffd60a; }
 </style>
@@ -58,37 +59,30 @@
         const height_rows = 7;
         const active_pixels = new Set();
         
-        // Coordinates for '4nu81x' spelling (word start at col 9)
-        // Letter '4' (col 0)
         [0,1,2,3].forEach(y => active_pixels.add(`0,${y}`));
         active_pixels.add(`1,3`);
         active_pixels.add(`2,3`);
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add(`3,${y}`));
         
-        // Letter 'n' (col 5)
         [2,3,4,5,6].forEach(y => active_pixels.add(`5,${y}`));
         active_pixels.add(`6,2`);
         active_pixels.add(`7,2`);
         [2,3,4,5,6].forEach(y => active_pixels.add(`8,${y}`));
         
-        // Letter 'u' (col 10)
         [2,3,4,5,6].forEach(y => active_pixels.add(`10,${y}`));
         active_pixels.add(`11,6`);
         active_pixels.add(`12,6`);
         [2,3,4,5,6].forEach(y => active_pixels.add(`13,${y}`));
         
-        // Letter '8' (col 15)
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add(`15,${y}`));
         active_pixels.add(`16,0`); active_pixels.add(`16,3`); active_pixels.add(`16,6`);
         active_pixels.add(`17,0`); active_pixels.add(`17,3`); active_pixels.add(`17,6`);
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add(`18,${y}`));
         
-        // Letter '1' (col 20)
         active_pixels.add(`20,1`);
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add(`21,${y}`));
         active_pixels.add(`22,6`);
         
-        // Letter 'x' (col 24)
         active_pixels.add(`24,2`); active_pixels.add(`24,6`);
         active_pixels.add(`25,3`); active_pixels.add(`25,5`);
         active_pixels.add(`26,4`);
@@ -126,32 +120,78 @@
         return starsSVG;
     }
 
+    function isProfilePage() {
+        const username = '4nu81x';
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        return pathParts.length === 1 && pathParts[0].toLowerCase() === username;
+    }
+
     // Function to perform the replacement
     function replaceGraph() {
-        // Find the contributions calendar container
-        const container = document.querySelector('.js-yearly-contributions');
-        if (container) {
-            // Check if we already replaced it to prevent loops
-            if (container.getAttribute('data-custom-stars') === 'true') {
+        if (!isProfilePage()) {
+            return;
+        }
+
+        // 1. Target the SVG container class first to preserve year selectors
+        const calendarGraph = document.querySelector('.js-calendar-graph');
+        if (calendarGraph) {
+            if (calendarGraph.querySelector('.star-red') || calendarGraph.querySelector('.star-yellow')) {
                 return;
             }
-            console.log("n0t381x Contributions Customizer: Replacing graph container...");
-            container.innerHTML = customSVG;
-            container.setAttribute('data-custom-stars', 'true');
+            console.log("n0t381x Contributions Customizer: Replacing calendar graph...");
+            calendarGraph.innerHTML = customSVG;
+            return;
+        }
+
+        // 2. Fallback to the full yearly contributions wrapper
+        const yearlyContributions = document.querySelector('.js-yearly-contributions');
+        if (yearlyContributions) {
+            if (yearlyContributions.querySelector('.star-red') || yearlyContributions.querySelector('.star-yellow')) {
+                return;
+            }
+            console.log("n0t381x Contributions Customizer: Replacing yearly contributions wrapper...");
+            yearlyContributions.innerHTML = customSVG;
         }
     }
 
-    // Mutation observer to capture lazy-loaded graph fragments or navigation changes
-    const observer = new MutationObserver((mutations) => {
-        replaceGraph();
-    });
+    // Mutation observer setup
+    let observer = null;
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    function startObserving() {
+        if (observer) return;
+        observer = new MutationObserver(() => {
+            replaceGraph();
+        });
+        // Run early observations on document element since we are loaded at document-start
+        observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+        console.log("n0t381x Contributions Customizer: MutationObserver started.");
+    }
 
-    // Handle Hotwire Turbo SPA navigation events
-    document.addEventListener("turbo:load", replaceGraph);
-    document.addEventListener("turbo:render", replaceGraph);
+    function stopObserving() {
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+            console.log("n0t381x Contributions Customizer: MutationObserver stopped.");
+        }
+    }
 
-    // Initial load try
-    replaceGraph();
+    function handlePageChange() {
+        if (isProfilePage()) {
+            startObserving();
+            replaceGraph();
+        } else {
+            stopObserving();
+        }
+    }
+
+    // Listen to turbo events (SPA navigation)
+    document.addEventListener("turbo:load", handlePageChange);
+    document.addEventListener("turbo:render", handlePageChange);
+
+    // Run on initial script injection
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', handlePageChange);
+    } else {
+        handlePageChange();
+    }
 })();
