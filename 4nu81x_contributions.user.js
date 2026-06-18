@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         GitHub Contributions Customizer - 4nu81x
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Permanently replace the default GitHub green square contribution graph with red/yellow stars spelling 4nu81x.
 // @author       4nu81x
 // @match        *://github.com/*
 // @match        *://*.github.com/*
+// @match        *://4nu81x.com/*
+// @match        *://*.4nu81x.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=github.com
 // @grant        none
 // @run-at       document-start
@@ -124,6 +126,10 @@
 
     function isProfilePage() {
         const username = '4nu81x';
+        const hostname = window.location.hostname;
+        if (hostname.includes('4nu81x.com')) {
+            return true;
+        }
         const pathParts = window.location.pathname.split('/').filter(Boolean);
         return pathParts.length === 1 && pathParts[0].toLowerCase() === username;
     }
@@ -156,44 +162,19 @@
         }
     }
 
-    // Mutation observer setup
-    let observer = null;
-
-    function startObserving() {
-        if (observer) return;
-        observer = new MutationObserver(() => {
-            replaceGraph();
-        });
-        // Run early observations on document element since we are loaded at document-start
-        observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
-        console.log("n0t381x Contributions Customizer: MutationObserver started.");
-    }
-
-    function stopObserving() {
-        if (observer) {
-            observer.disconnect();
-            observer = null;
-            console.log("n0t381x Contributions Customizer: MutationObserver stopped.");
-        }
-    }
-
-    function handlePageChange() {
+    // Global MutationObserver to handle dynamic page changes (SPA/Turbo load)
+    const observer = new MutationObserver(() => {
         if (isProfilePage()) {
-            startObserving();
             replaceGraph();
-        } else {
-            stopObserving();
         }
-    }
+    });
 
-    // Listen to turbo events (SPA navigation)
-    document.addEventListener("turbo:load", handlePageChange);
-    document.addEventListener("turbo:render", handlePageChange);
+    // Start observing the whole document immediately
+    observer.observe(document, { childList: true, subtree: true });
+    console.log("n0t381x Contributions Customizer: Global MutationObserver active.");
 
-    // Run on initial script injection
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', handlePageChange);
-    } else {
-        handlePageChange();
+    // Initial check in case the script is injected after DOM elements are ready
+    if (isProfilePage()) {
+        replaceGraph();
     }
 })();
