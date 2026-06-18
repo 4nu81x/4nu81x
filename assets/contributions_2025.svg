@@ -334,13 +334,13 @@
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(250, 68)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(250, 83)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
   </g>
   <g transform="translate(250, 98)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(250, 113)">
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
@@ -487,13 +487,13 @@
     <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(355, 98)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(355, 113)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
   </g>
   <g transform="translate(355, 128)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(355, 143)">
     <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
@@ -508,13 +508,13 @@
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(370, 98)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(370, 113)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(370, 128)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(370, 143)">
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
@@ -529,13 +529,13 @@
     <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
   </g>
   <g transform="translate(385, 98)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(385, 113)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(385, 128)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(385, 143)">
     <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
@@ -547,19 +547,19 @@
     <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
   </g>
   <g transform="translate(400, 83)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(400, 98)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(400, 113)">
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(400, 128)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(400, 143)">
-    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
+    <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(400, 158)">
     <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
@@ -568,7 +568,7 @@
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />
   </g>
   <g transform="translate(415, 83)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(415, 98)">
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
@@ -580,7 +580,7 @@
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-empty" />
   </g>
   <g transform="translate(415, 143)">
-    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-empty" />
+    <path d="M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z" class="flag-active" />
   </g>
   <g transform="translate(415, 158)">
     <path d="M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z" class="parrot-active" />

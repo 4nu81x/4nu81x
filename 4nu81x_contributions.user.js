@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         GitHub Contributions Customizer - 4nu81x
 // @namespace    http://tampermonkey.net/
-// @version      1.5
-// @description  Permanently replace the default GitHub green square contribution graph with neon-cycling flags and parrots spelling h4k0r.
+// @version      1.6
+// @description  Permanently replace the default GitHub green square contribution graph with neon-cycling flags and parrots spelling H4X0r.
 // @author       4nu81x
 // @match        *://github.com/*
 // @match        *://*.github.com/*
@@ -26,11 +26,11 @@
         const height_rows = 7;
         const active_pixels = new Set();
         
-        // Letter 'h' (starts at 0)
+        // Letter 'H' (starts at 0)
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add("0," + y));
         active_pixels.add("1,3");
         active_pixels.add("2,3");
-        [3,4,5,6].forEach(y => active_pixels.add("3," + y));
+        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("3," + y));
         
         // Letter '4' (starts at 5)
         [0,1,2,3].forEach(y => active_pixels.add("5," + y));
@@ -38,12 +38,12 @@
         active_pixels.add("7,3");
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add("8," + y));
         
-        // Letter 'k' (starts at 10)
-        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("10," + y));
-        active_pixels.add("11,3");
-        active_pixels.add("12,2"); active_pixels.add("12,4");
-        active_pixels.add("13,1"); active_pixels.add("13,5");
-        active_pixels.add("14,0"); active_pixels.add("14,6");
+        // Letter 'X' (starts at 10)
+        [0,1,5,6].forEach(y => active_pixels.add("10," + y));
+        [2,4].forEach(y => active_pixels.add("11," + y));
+        active_pixels.add("12,3");
+        [2,4].forEach(y => active_pixels.add("13," + y));
+        [0,1,5,6].forEach(y => active_pixels.add("14," + y));
         
         // Letter '0' (starts at 16)
         [0,1,2,3,4,5,6].forEach(y => active_pixels.add("16," + y));
