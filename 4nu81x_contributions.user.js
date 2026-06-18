@@ -26,37 +26,37 @@
         const height_rows = 7;
         const active_pixels = new Set();
         
-        [0,1,2,3].forEach(y => active_pixels.add("0," + y));
+        // Letter 'h' (starts at 0)
+        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("0," + y));
         active_pixels.add("1,3");
         active_pixels.add("2,3");
-        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("3," + y));
+        [3,4,5,6].forEach(y => active_pixels.add("3," + y));
         
-        [2,3,4,5,6].forEach(y => active_pixels.add("5," + y));
-        active_pixels.add("6,2");
-        active_pixels.add("7,2");
-        [2,3,4,5,6].forEach(y => active_pixels.add("8," + y));
+        // Letter '4' (starts at 5)
+        [0,1,2,3].forEach(y => active_pixels.add("5," + y));
+        active_pixels.add("6,3");
+        active_pixels.add("7,3");
+        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("8," + y));
         
-        [2,3,4,5,6].forEach(y => active_pixels.add("10," + y));
-        active_pixels.add("11,6");
-        active_pixels.add("12,6");
-        [2,3,4,5,6].forEach(y => active_pixels.add("13," + y));
+        // Letter 'k' (starts at 10)
+        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("10," + y));
+        active_pixels.add("11,3");
+        active_pixels.add("12,2"); active_pixels.add("12,4");
+        active_pixels.add("13,1"); active_pixels.add("13,5");
+        active_pixels.add("14,0"); active_pixels.add("14,6");
         
-        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("15," + y));
-        active_pixels.add("16,0"); active_pixels.add("16,3"); active_pixels.add("16,6");
-        active_pixels.add("17,0"); active_pixels.add("17,3"); active_pixels.add("17,6");
-        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("18," + y));
+        // Letter '0' (starts at 16)
+        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("16," + y));
+        active_pixels.add("17,0"); active_pixels.add("17,6");
+        active_pixels.add("18,0"); active_pixels.add("18,6");
+        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("19," + y));
         
-        active_pixels.add("20,1");
-        [0,1,2,3,4,5,6].forEach(y => active_pixels.add("21," + y));
-        active_pixels.add("22,6");
-        
-        active_pixels.add("24,2"); active_pixels.add("24,6");
-        active_pixels.add("25,3"); active_pixels.add("25,5");
-        active_pixels.add("26,4");
-        active_pixels.add("27,3"); active_pixels.add("27,5");
-        active_pixels.add("28,2"); active_pixels.add("28,6");
+        // Letter 'r' (starts at 21)
+        [2,3,4,5,6].forEach(y => active_pixels.add("21," + y));
+        active_pixels.add("22,2");
+        active_pixels.add("23,2");
 
-        const word_start_col = 9;
+        const word_start_col = 11;
         const spelled_pixels = new Set();
         active_pixels.forEach(coord => {
             const parts = coord.split(",");
