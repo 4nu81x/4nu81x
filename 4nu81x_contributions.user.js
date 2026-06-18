@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GitHub Contributions Customizer - 4nu81x
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Permanently replace the default GitHub green square contribution graph with red/yellow stars spelling 4nu81x.
 // @author       4nu81x
 // @match        https://github.com/4nu81x*
@@ -12,6 +12,8 @@
 
 (function() {
     'use strict';
+
+    console.log("n0t381x Contributions Customizer: Script Loaded.");
 
     // SVG representation of custom star contributions spelling 4nu81x
     const customSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 185" width="100%" height="100%">
@@ -126,22 +128,30 @@
 
     // Function to perform the replacement
     function replaceGraph() {
-        const container = document.querySelector('.js-calendar-graph');
+        // Find the contributions calendar container
+        const container = document.querySelector('.js-yearly-contributions');
         if (container) {
-            // Replace the default graph wrapper with our custom stars graph
+            // Check if we already replaced it to prevent loops
+            if (container.getAttribute('data-custom-stars') === 'true') {
+                return;
+            }
+            console.log("n0t381x Contributions Customizer: Replacing graph container...");
             container.innerHTML = customSVG;
+            container.setAttribute('data-custom-stars', 'true');
         }
     }
 
-    // Use a mutation observer to handle dynamic navigation (GitHub's client-side loading)
+    // Mutation observer to capture lazy-loaded graph fragments or navigation changes
     const observer = new MutationObserver((mutations) => {
-        if (document.querySelector('.js-calendar-graph')) {
-            replaceGraph();
-        }
+        replaceGraph();
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Initial check on load
+    // Handle Hotwire Turbo SPA navigation events
+    document.addEventListener("turbo:load", replaceGraph);
+    document.addEventListener("turbo:render", replaceGraph);
+
+    // Initial load try
     replaceGraph();
 })();
