@@ -18,7 +18,10 @@
 
     console.log("n0t381x Contributions Customizer: Script Loaded.");
 
-    function generateStars() {
+    const flag_path = "M 2,1 L 3,1 L 3,2 L 10,2 L 10,7 L 3,7 L 3,11 L 2,11 Z";
+    const parrot_path = "M 6,1 C 5,1 4,2 3,2.5 L 2.5,3.5 L 4,4 C 4.5,5.5 5,7 5.5,9 L 5,11 L 6.5,11 L 7.5,9 C 8.5,8 9.5,6 9.5,4 C 9.5,2 8,1 6,1 Z";
+
+    function generateShapes() {
         const width_cols = 46;
         const height_rows = 7;
         const active_pixels = new Set();
@@ -62,28 +65,29 @@
             spelled_pixels.add((word_start_col + x_rel) + "," + y);
         });
 
-        const star_path = "M 6,0 L 7.8,3.6 L 11.8,4.2 L 8.9,7 L 9.6,11 L 6,9.1 L 2.4,11 L 3.1,7 L 0.2,4.2 L 4.2,3.6 Z";
         const grid_start_x = 40;
         const grid_start_y = 68;
         const cell_size = 12;
         const gap = 3;
 
-        let starsSVG = "";
+        let shapesSVG = "";
         for (let x = 0; x < width_cols; x++) {
             for (let y = 0; y < height_rows; y++) {
                 const pos_x = grid_start_x + x * (cell_size + gap);
                 const pos_y = grid_start_y + y * (cell_size + gap);
                 const is_active = spelled_pixels.has(x + "," + y);
+                const is_flag = (x + y) % 2 === 0;
+                const path = is_flag ? flag_path : parrot_path;
                 
-                let cls = "star-empty";
+                let cls = is_flag ? "flag-empty" : "parrot-empty";
                 if (is_active) {
-                    cls = (x + y) % 2 === 0 ? "star-red" : "star-yellow";
+                    cls = is_flag ? "flag-active" : "parrot-active";
                 }
                 
-                starsSVG += '<g transform="translate(' + pos_x + ', ' + pos_y + ')"><path d="' + star_path + '" class="' + cls + '" /></g>';
+                shapesSVG += '<g transform="translate(' + pos_x + ', ' + pos_y + ')"><path d="' + path + '" class="' + cls + '" /></g>';
             }
         }
-        return starsSVG;
+        return shapesSVG;
     }
 
     function getCustomSVG() {
@@ -92,9 +96,26 @@
   .bg { fill: transparent; }
   .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: var(--color-fg-muted, #8b949e); }
   .header { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: var(--color-fg-default, #adbac7); }
-  .star-empty { fill: var(--color-calendar-graph-day-bg, #21262d); }
-  .star-red { fill: #ff453a; }
-  .star-yellow { fill: #ffd60a; }
+  .flag-empty { fill: var(--color-calendar-graph-day-bg, #21262d); }
+  .parrot-empty { fill: var(--color-calendar-graph-day-bg, #21262d); }
+  .flag-active { animation: color-cycle-a 2.5s infinite linear; }
+  .parrot-active { animation: color-cycle-b 2.5s infinite linear; }
+
+  @keyframes color-cycle-a {
+    0% { fill: #ff453a; }
+    25% { fill: #39ff14; }
+    50% { fill: #bf5af2; }
+    75% { fill: #ffd60a; }
+    100% { fill: #ff453a; }
+  }
+
+  @keyframes color-cycle-b {
+    0% { fill: #bf5af2; }
+    25% { fill: #ffd60a; }
+    50% { fill: #ff453a; }
+    75% { fill: #39ff14; }
+    100% { fill: #bf5af2; }
+  }
 </style>
   <rect width="780" height="185" class="bg" />
   <text x="25" y="32" class="header">1,303 contributions in the last year</text>
@@ -113,13 +134,13 @@
   <text x="15" y="80" class="label">Mon</text>
   <text x="15" y="110" class="label">Wed</text>
   <text x="15" y="140" class="label">Fri</text>
-  <!-- Generated Stars from script -->` + generateStars() + `
+  <!-- Generated Shapes from script -->` + generateShapes() + `
   <!-- Bottom Legend (Less -> More) -->
   <text x="25" y="171" class="label">Learn how we count contributions</text>
   <text x="580" y="171" class="label">Less</text>
-  <g transform="translate(610, 162)"><path d="M 6,0 L 7.8,3.6 L 11.8,4.2 L 8.9,7 L 9.6,11 L 6,9.1 L 2.4,11 L 3.1,7 L 0.2,4.2 L 4.2,3.6 Z" class="star-empty" /></g>
-  <g transform="translate(625, 162)"><path d="M 6,0 L 7.8,3.6 L 11.8,4.2 L 8.9,7 L 9.6,11 L 6,9.1 L 2.4,11 L 3.1,7 L 0.2,4.2 L 4.2,3.6 Z" class="star-yellow" /></g>
-  <g transform="translate(640, 162)"><path d="M 6,0 L 7.8,3.6 L 11.8,4.2 L 8.9,7 L 9.6,11 L 6,9.1 L 2.4,11 L 3.1,7 L 0.2,4.2 L 4.2,3.6 Z" class="star-red" /></g>
+  <g transform="translate(610, 162)"><path d="` + flag_path + `" class="flag-empty" /></g>
+  <g transform="translate(625, 162)"><path d="` + parrot_path + `" class="parrot-active" /></g>
+  <g transform="translate(640, 162)"><path d="` + flag_path + `" class="flag-active" /></g>
   <text x="659" y="171" class="label">More</text>
 </svg>`;
     }
@@ -143,7 +164,7 @@
         // 1. Target the SVG container class first to preserve year selectors
         const calendarGraph = document.querySelector('.js-calendar-graph');
         if (calendarGraph) {
-            if (calendarGraph.querySelector('.star-red') || calendarGraph.querySelector('.star-yellow')) {
+            if (calendarGraph.querySelector('.flag-active') || calendarGraph.querySelector('.parrot-active')) {
                 return;
             }
             console.log("n0t381x Contributions Customizer: Replacing calendar graph...");
@@ -154,7 +175,7 @@
         // 2. Fallback to the full yearly contributions wrapper
         const yearlyContributions = document.querySelector('.js-yearly-contributions');
         if (yearlyContributions) {
-            if (yearlyContributions.querySelector('.star-red') || yearlyContributions.querySelector('.star-yellow')) {
+            if (yearlyContributions.querySelector('.flag-active') || yearlyContributions.querySelector('.parrot-active')) {
                 return;
             }
             console.log("n0t381x Contributions Customizer: Replacing yearly contributions wrapper...");
