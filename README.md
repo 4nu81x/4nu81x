@@ -106,7 +106,7 @@ Run the included automated launch script:
      -m DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf \
      --host 127.0.0.1 \
      --port 8080 \
-     -c 4096 \
+     -c 40960 \
      --alias DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf \
      --cors "*"
    ```

@@ -10,7 +10,7 @@ MODEL_NAME="DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf"
 MODEL_URL="https://huggingface.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/resolve/main/DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf"
 HOST="127.0.0.1"
 PORT="8080"
-CONTEXT_SIZE="4096"
+CONTEXT_SIZE="40960"
 
 echo -e "\033[1;32m[+] Initializing Note81x Local LLM Telemetry Server...\033[0m"
 
