@@ -25,20 +25,21 @@ Welcome to the digital terminal of **4nu81x**. Offensive security tradecraft dev
 [ DECK ]      :: Ubuntu / Custom Cyberdeck v3
 [ RUNTIME ]   :: Node.js / TypeScript / Python 3.11
 [ AGENTS ]    :: 0xJackal - Universal AI Rig Architect
-[ EXTENSION ] :: Note81x v2.0.0 (Operational Filter Engine)
+[ EXTENSION ] :: Note81x v3.0.0 (Operational Filter Engine)
 -----------------------------------------------------------------
 ```
 
 ---
 
-## 🚀 Note81x :: Operational Filter (Version 2.0)
+## 🚀 Note81x :: Operational Filter (Version 3.0)
 
-> **Status:** `OPERATIONAL (v2.0.0)` | **Release Package:** [Download Note81x-v2.0.0.zip](https://github.com/4nu81x/4nu81x/releases/download/v2.0.0/Note81x-v2.0.0.zip)
+> **Status:** `OPERATIONAL (v3.0.0)` | **Release Package:** [Download Note81x-v3.0.0.zip](https://github.com/4nu81x/4nu81x/releases/download/v3.0.0/Note81x-v3.0.0.zip)
 
-**Note81x v2.0** is a high-speed Manifest V3 browser extension designed to ingest complex technical articles, security lab guides (HTB, OSCP, THM), and research papers, converting them into structured, high-density Obsidian markdown notes via local DeepSeek LLM inference.
+**Note81x v3.0** is a high-speed Manifest V3 browser extension designed to ingest complex technical articles, security lab guides (HTB, OSCP, THM), and research papers, converting them into structured, high-density Obsidian markdown notes via local DeepSeek LLM inference.
 
-### 🌟 What's New in Version 2.0 (Changelog)
+### 🌟 What's New in Version 3.0 (Changelog)
 
+* ⚡ **Major Architecture Upgrade to Version 3.0**: Upgraded core extension architecture from legacy mobile v2 sub-systems to full Manifest V3 desktop & cross-browser production engine.
 * 💾 **Persistent Session Auto-Save**: Automatically restores notes and state across extension popup reopens using `chrome.storage.local`. No lost notes if you switch tabs or click away.
 * 🗑️ **One-Click Session Reset**: Added a dedicated `Clear Session` action button with high-contrast safety styling that purges local telemetry state and cleanly terminates the popup UI.
 * 🎯 **Smart DOM Parsing Engine**: Upgraded page text extractor to prioritize target content selectors (`article`, `main`, `#main-content`, `.markdown-body`) before falling back to full body text, eliminating header/nav/footer noise.
@@ -54,7 +55,7 @@ Welcome to the digital terminal of **4nu81x**. Offensive security tradecraft dev
 
 ### 📦 Installation & Setup
 
-1. **Download the Release**: Download `Note81x-v2.0.0.zip` from [GitHub Releases](https://github.com/4nu81x/4nu81x/releases).
+1. **Download the Release**: Download `Note81x-v3.0.0.zip` from [GitHub Releases](https://github.com/4nu81x/4nu81x/releases).
 2. **Unpack Extension**: Extract the zip archive to a local folder.
 3. **Load in Browser**:
    * **Chrome/Brave/Edge**: Navigate to `chrome://extensions`, enable **Developer mode**, and click **Load unpacked**. Select the extracted directory.
@@ -66,11 +67,11 @@ Welcome to the digital terminal of **4nu81x**. Offensive security tradecraft dev
 ## 🛠️ Active Repositories & Toolsets
 
 ### 🖥️ [Note81x / 4nu81x](https://github.com/4nu81x/4nu81x)
-> **Status:** `OPERATIONAL (v2.0.0)`  
+> **Status:** `OPERATIONAL (v3.0.0)`  
 > High-speed browser extension designed to filter academic and lab text (OSCP, HTB) into structured, Obsidian-ready Markdown notes via DeepSeek.
 
 ### 🖥️ [n0t381x](https://github.com/4nu81x/n0t381x)
-> **Status:** `OPERATIONAL (v2.0.0)`  
+> **Status:** `OPERATIONAL (v3.0.0)`  
 > Extension release mirror and documentation repository.
 
 ### 🌐 [main-website](https://github.com/4nu81x/main-website)
