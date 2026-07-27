@@ -1,0 +1,8 @@
+# OS and IDE files
+.DS_Store
+*.log
+.gemini/
+scratch/
+
+# Build and release packages
+*.zip
