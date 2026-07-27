@@ -63,14 +63,63 @@
 
 ---
 
-### 📦 Quick Setup & Installation
+### 📦 Quick Extension Installation
 
 1. **Download Package**: Download [`Note81x-v3.0.0.zip`](https://github.com/4nu81x/4nu81x/releases/download/v3.0.0/Note81x-v3.0.0.zip) from GitHub Releases.
 2. **Unpack Extension**: Extract zip contents to a local folder.
 3. **Load in Browser**:
    * **Chrome / Brave / Edge**: Go to `chrome://extensions` &rarr; enable **Developer mode** &rarr; click **Load unpacked**.
    * **Firefox**: Go to `about:debugging#/runtime/this-firefox` &rarr; click **Load Temporary Add-on** &rarr; select `manifest.json`.
-4. **Start LLM Backend**: Point local `llama-server` or OpenAI-compatible endpoint to `http://127.0.0.1:8080/v1/chat/completions` running `DeepSeek-Coder-V2-Lite-Instruct`.
+
+---
+
+### 🤖 Local LLM Backend Setup & Installation Guide
+
+Note81x connects to a local, private LLM server running **DeepSeek-Coder-V2-Lite-Instruct** listening at `http://127.0.0.1:8080/v1/chat/completions`. Follow either method below to set up your backend:
+
+#### Option A: Automated One-Line Setup (Recommended for Linux/macOS)
+
+Run the included automated launch script:
+```bash
+./start_backend.sh
+```
+*The script checks for `llama-server`, automatically fetches the model file from HuggingFace if missing, and launches the server with CORS enabled.*
+
+---
+
+#### Option B: Manual Setup via `llama-server` (`llama.cpp`)
+
+1. **Build or Install `llama.cpp`**:
+   ```bash
+   git clone https://github.com/ggerganov/llama.cpp
+   cd llama.cpp && cmake -B build && cmake --build build --config Release -j$(nproc)
+   ```
+
+2. **Download Model File (`DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf`)**:
+   ```bash
+   wget -c https://huggingface.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/resolve/main/DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf
+   ```
+
+3. **Start the LLM Endpoint**:
+   ```bash
+   ./build/bin/llama-server \
+     -m DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf \
+     --host 127.0.0.1 \
+     --port 8080 \
+     -c 4096 \
+     --alias DeepSeek-Coder-V2-Lite-Instruct-Q4_K_M.gguf \
+     --cors "*"
+   ```
+
+---
+
+#### Option C: Alternative Setup via `Ollama`
+
+If you use **Ollama**, run the DeepSeek model and reverse-proxy or point to port `8080`:
+```bash
+ollama run deepseek-coder-v2:16b-lite-instruct-q4_K_M
+```
+*(Ensure `OLLAMA_ORIGINS="chrome-extension://*"` is set to permit browser requests).*
 
 ---
 
