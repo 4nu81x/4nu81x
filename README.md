@@ -1,12 +1,23 @@
-# 🪐 4nu81x // Neural Grid Active (Cyberpunk Edition)
+<div align="center">
 
-Welcome to the digital terminal of **4nu81x**. Offensive security tradecraft developer, CTF architect, and AI rig systems integrator.
+# 🪐 4nu81x // Neural Grid Active
+
+**Offensive Security Tradecraft Developer · CTF Architect · AI Rig Systems Integrator**
+
+[![Version 3.0.0](https://img.shields.io/badge/Note81x-v3.0.0-00ff66?style=for-the-badge&logo=googlechrome&logoColor=black)](https://github.com/4nu81x/4nu81x/releases/tag/v3.0.0)
+[![Manifest V3](https://img.shields.io/badge/Manifest-MV3-00b4d8?style=for-the-badge&logo=mozilla-firefox&logoColor=white)](https://github.com/4nu81x/4nu81x)
+[![LLM Backend](https://img.shields.io/badge/AI-DeepSeek--V2-7209b7?style=for-the-badge&logo=python&logoColor=white)](https://github.com/4nu81x/4nu81x)
+[![Security Status](https://img.shields.io/badge/Status-OPERATIONAL-38b000?style=for-the-badge&logo=kalilinux&logoColor=white)](https://4nu81x.com)
+
+<br/>
 
 <p align="center">
   <img src="assets/contributions_2026.svg?v=6" alt="4nu81x 2026 Grid Telemetry" width="100%" style="margin-bottom: 10px;" />
   <br/>
   <img src="assets/contributions_2025.svg?v=6" alt="4nu81x 2025 Grid Telemetry" width="100%" />
 </p>
+
+</div>
 
 ---
 
@@ -23,76 +34,77 @@ Welcome to the digital terminal of **4nu81x**. Offensive security tradecraft dev
 [ SYSTEM MATRIX ]
 -----------------------------------------------------------------
 [ DECK ]      :: Ubuntu / Custom Cyberdeck v3
-[ RUNTIME ]   :: Node.js / TypeScript / Python 3.11
+[ RUNTIME ]   :: Node.js / TypeScript / Python 3.11 / Bash
 [ AGENTS ]    :: 0xJackal - Universal AI Rig Architect
 [ EXTENSION ] :: Note81x v3.0.0 (Operational Filter Engine)
+[ PROTOCOL ]  :: HTTPS / SSH / TLS 1.3 / localtunnel
 -----------------------------------------------------------------
 ```
 
 ---
 
-## 🚀 Note81x :: Operational Filter (Version 3.0)
+## 🚀 Featured Tool: Note81x :: Operational Filter (Version 3.0)
 
-> **Status:** `OPERATIONAL (v3.0.0)` | **Release Package:** [Download Note81x-v3.0.0.zip](https://github.com/4nu81x/4nu81x/releases/download/v3.0.0/Note81x-v3.0.0.zip)
+> **Status:** `OPERATIONAL (v3.0.0)` &nbsp;|&nbsp; **Direct Download:** [![Download Release](https://img.shields.io/badge/Download-Note81x--v3.0.0.zip-00ff66?style=flat-square&logo=github)](https://github.com/4nu81x/4nu81x/releases/download/v3.0.0/Note81x-v3.0.0.zip)
 
-**Note81x v3.0** is a high-speed Manifest V3 browser extension designed to ingest complex technical articles, security lab guides (HTB, OSCP, THM), and research papers, converting them into structured, high-density Obsidian markdown notes via local DeepSeek LLM inference.
+**Note81x v3.0** is a high-speed Manifest V3 browser extension built to ingest complex cybersecurity research, lab write-ups (HTB, OSCP, THM), and technical documentation, transforming raw web pages into structured, Obsidian-ready Markdown notes via local DeepSeek LLM inference.
 
-### 🌟 What's New in Version 3.0 (Changelog)
+### 🌟 Version 3.0 Features & Improvements
 
-* ⚡ **Major Architecture Upgrade to Version 3.0**: Upgraded core extension architecture from legacy mobile v2 sub-systems to full Manifest V3 desktop & cross-browser production engine.
-* 💾 **Persistent Session Auto-Save**: Automatically restores notes and state across extension popup reopens using `chrome.storage.local`. No lost notes if you switch tabs or click away.
-* 🗑️ **One-Click Session Reset**: Added a dedicated `Clear Session` action button with high-contrast safety styling that purges local telemetry state and cleanly terminates the popup UI.
-* 🎯 **Smart DOM Parsing Engine**: Upgraded page text extractor to prioritize target content selectors (`article`, `main`, `#main-content`, `.markdown-body`) before falling back to full body text, eliminating header/nav/footer noise.
-* 🧠 **High-Density Decision Matrix Prompt**: Replaced standard summary outputs with an operational breakdown featuring:
-  * **Context & Operational Purpose**
-  * **Decision Matrix & Mechanics** (Table format comparing options, inputs, and selection rules)
-  * **Execution & Command Syntaxes** (Exact payloads and commands)
-  * **Tactical Notes & Trade-offs** (Single-line core takeaway)
-* 🎨 **Refined Cyberpunk Interface**: Styled with dark `#0a0a0c` canvas, neon green accents (`#00ff66`), code-optimized JetBrains Mono typography, interactive button glow effects, and auto code-fence cleaning.
-* 🦊 **Cross-Browser Manifest V3**: Native support for Chrome and Firefox (Gecko ID `note81x@local.internal`).
+| Feature | Description |
+| :--- | :--- |
+| ⚡ **V3 Engine Upgrade** | Complete architectural upgrade from legacy mobile v2 sub-systems to full Manifest V3 desktop & cross-browser production engine. |
+| 💾 **Persistent Session Auto-Save** | Automatically retains and restores notes across popup reopens using `chrome.storage.local`. |
+| 🗑️ **One-Click Session Purge** | Dedicated `Clear Session` action button with warning safety styling that resets local storage and cleanly terminates UI. |
+| 🎯 **Smart DOM Content Extraction** | Prioritizes target content containers (`article`, `main`, `#main-content`, `.markdown-body`), eliminating navigation and footer noise. |
+| 🧠 **Decision Matrix System Prompt** | Structurally formats notes into Operational Summaries, Decision Comparison Tables, Command Syntaxes, and Tactical Trade-offs. |
+| 🎨 **Cyberpunk Terminal Design** | Obsidian dark canvas (`#0a0a0c`), neon green accents (`#00ff66`), glowing hover elements, and auto code-block cleaning. |
+| 🦊 **Cross-Browser MV3 Support** | Native support for Google Chrome, Brave, Microsoft Edge, and Mozilla Firefox (Gecko ID `note81x@local.internal`). |
 
 ---
 
-### 📦 Installation & Setup
+### 📦 Quick Setup & Installation
 
-1. **Download the Release**: Download `Note81x-v3.0.0.zip` from [GitHub Releases](https://github.com/4nu81x/4nu81x/releases).
-2. **Unpack Extension**: Extract the zip archive to a local folder.
+1. **Download Package**: Download [`Note81x-v3.0.0.zip`](https://github.com/4nu81x/4nu81x/releases/download/v3.0.0/Note81x-v3.0.0.zip) from GitHub Releases.
+2. **Unpack Extension**: Extract zip contents to a local folder.
 3. **Load in Browser**:
-   * **Chrome/Brave/Edge**: Navigate to `chrome://extensions`, enable **Developer mode**, and click **Load unpacked**. Select the extracted directory.
-   * **Firefox**: Navigate to `about:debugging#/runtime/this-firefox`, click **Load Temporary Add-on**, and select `manifest.json`.
-4. **Local LLM Backend**: Ensure your local `llama-server` or OpenAI-compatible API endpoint is listening on `http://127.0.0.1:8080/v1/chat/completions` serving `DeepSeek-Coder-V2-Lite-Instruct`.
+   * **Chrome / Brave / Edge**: Go to `chrome://extensions` &rarr; enable **Developer mode** &rarr; click **Load unpacked**.
+   * **Firefox**: Go to `about:debugging#/runtime/this-firefox` &rarr; click **Load Temporary Add-on** &rarr; select `manifest.json`.
+4. **Start LLM Backend**: Point local `llama-server` or OpenAI-compatible endpoint to `http://127.0.0.1:8080/v1/chat/completions` running `DeepSeek-Coder-V2-Lite-Instruct`.
 
 ---
 
 ## 🛠️ Active Repositories & Toolsets
 
-### 🖥️ [Note81x / 4nu81x](https://github.com/4nu81x/4nu81x)
-> **Status:** `OPERATIONAL (v3.0.0)`  
-> High-speed browser extension designed to filter academic and lab text (OSCP, HTB) into structured, Obsidian-ready Markdown notes via DeepSeek.
+| Repository | Status | Primary Function |
+| :--- | :---: | :--- |
+| **[4nu81x / 4nu81x](https://github.com/4nu81x/4nu81x)** | `v3.0.0` | Profile Neural Grid & Note81x Operational Filter Extension codebase. |
+| **[n0t381x](https://github.com/4nu81x/n0t381x)** | `v3.0.0` | Official documentation mirror and release distribution for Note81x. |
+| **[main-website](https://github.com/4nu81x/main-website)** | `ONLINE` | Terminal-style portfolio site with Linux CLI aesthetics & interactive commands. |
+| **[ubuntu-offsec-setup](https://github.com/4nu81x/ubuntu-offsec-setup)** | `ONLINE` | Automated bash provisioning utility to configure offensive security workstations. |
+| **[0xJackal](https://github.com/4nu81x/0xJackal)** | `DEPLOYED` | Universal AI Rig Architect and custom agent integration systems. |
+| **[git-art](https://github.com/4nu81x/git-art)** | `ONLINE` | Custom animated SVG contribution grid generator for GitHub profiles. |
 
-### 🖥️ [n0t381x](https://github.com/4nu81x/n0t381x)
-> **Status:** `OPERATIONAL (v3.0.0)`  
-> Extension release mirror and documentation repository.
+---
 
-### 🌐 [main-website](https://github.com/4nu81x/main-website)
-> **Status:** `ONLINE`  
-> Terminal-style portfolio site with Linux CLI aesthetics. Run interactive commands, explore capabilities, and decrypt logs directly in your browser.
+## 💻 Tech Stack & Capabilities
 
-### 🪐 [ubuntu-offsec-setup](https://github.com/4nu81x/ubuntu-offsec-setup)
-> **Status:** `ONLINE`  
-> A highly automated, interactive, and theme-styled bash provisioning utility to configure an offensive security workstation.
-
-### 🦊 [0xJackal](https://github.com/4nu81x/0xJackal)
-> **Status:** `DESTRUCT / DEPLOYED`  
-> Universal AI Rig Architect and custom agent integration systems.
+```text
+[ PARADIGMS ] :: Offensive Security / Automation / Custom AI Rigs / Extension Architectures
+[ LANGUAGES ] :: TypeScript / JavaScript (ESNext) / Python 3 / Bash Shell / HTML5 / CSS3
+[ PLATFORMS ] :: Chrome Extensions MV3 / Firefox WebExtensions / Linux (Ubuntu) / Node.js
+[ AI & LLM  ] :: DeepSeek-Coder-V2 / llama-server / OpenAI API Protocol / Ollama
+[ TARGETS   ] :: HackTheBox / OffSec OSCP / TryHackMe / Custom Lab Automation
+```
 
 ---
 
 ## 🧪 Connection Protocols
 
-*   **Webpage:** [https://4nu81x.com](https://4nu81x.com)
-*   **Secure Contact:** `4nu81x@4sec.online`
+* 🌐 **Web Terminal:** [https://4nu81x.com](https://4nu81x.com)
+* ✉️ **Encrypted Contact:** `4nu81x@4sec.online`
+* 🐙 **GitHub Profile:** [@4nu81x](https://github.com/4nu81x)
 
 ```text
-[+] PING SUCCESSFUL. SESSION ESTABLISHED.
+[+] PING SUCCESSFUL. SESSION ESTABLISHED. 4NU81X NEURAL GRID READY.
 ```
